@@ -1,8 +1,15 @@
 const express = require("express");
+const cors = require("cors");
 const morgan = require("morgan");
 const router = require("./routes/route");
 
 const app = express();
+
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 app.use(express.json());
 
